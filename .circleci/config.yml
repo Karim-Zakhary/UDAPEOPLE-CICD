@@ -364,7 +364,7 @@ workflows:
 
          
 
-      - deploy-infrastructure:
+      - deploy-environment:
           requires: [test-frontend, test-backend, scan-frontend, scan-backend]
           filters:
             branches:
