@@ -426,7 +426,7 @@ jobs:
           event: pass
           channel: cicd_pipline
           template: success_tagged_deployment_1 
-
+ 
 workflows:
   default:
     jobs:
@@ -463,5 +463,5 @@ workflows:
           requires: [deploy-backend, deploy-frontend]
       - cloudfront-update:
           requires: [smoke-test]
-      # - cleanup:
-      #     requires: [cloudfront-update]
+      - cleanup:
+          requires: [cloudfront-update]
